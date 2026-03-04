@@ -1,0 +1,37 @@
+import React from "react";
+import { TableBlock } from "../components/runtime/TableBlock";
+import { MethodButton } from "../components/MethodButton";
+
+const Indisponibilite: React.FC = () => {
+  return (
+    <div id="page-indisponibilite-2">
+    <div id="ila4is" style={{"display": "flex", "height": "100vh", "fontFamily": "Arial, sans-serif", "--chart-color-palette": "default"}}>
+      <nav id="ifeqjp" style={{"width": "250px", "background": "linear-gradient(135deg, #4b3c82 0%, #5a3d91 100%)", "color": "white", "padding": "20px", "overflowY": "auto", "display": "flex", "flexDirection": "column", "--chart-color-palette": "default"}}>
+        <h2 id="i65tyl" style={{"marginTop": "0", "fontSize": "24px", "marginBottom": "30px", "fontWeight": "bold", "--chart-color-palette": "default"}}>{"BESSER"}</h2>
+        <div id="irpeai" style={{"display": "flex", "flexDirection": "column", "flex": "1", "--chart-color-palette": "default"}}>
+          <a id="ihyc48" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/centrecongres">{"CentreCongres"}</a>
+          <a id="id2wrd" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/elementcentre">{"ElementCentre"}</a>
+          <a id="ixfacr" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "rgba(255,255,255,0.2)", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/indisponibilite">{"Indisponibilite"}</a>
+          <a id="iyyh7h" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/tarifsaisonnier">{"TarifSaisonnier"}</a>
+          <a id="i2splj" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/reservation">{"Reservation"}</a>
+          <a id="i5iqex" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/materiel">{"Materiel"}</a>
+          <a id="iuuxr7" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/prestation">{"Prestation"}</a>
+          <a id="iez9y8" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/lienreservationelement">{"LienReservationElement"}</a>
+          <a id="i2hqqc" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/lienreservationmateriel">{"LienReservationMateriel"}</a>
+          <a id="iexn74" style={{"color": "white", "textDecoration": "none", "padding": "10px 15px", "display": "block", "background": "transparent", "borderRadius": "4px", "marginBottom": "5px", "--chart-color-palette": "default"}} href="/lienreservationprestation">{"LienReservationPrestation"}</a>
+        </div>
+        <p id="ix3x2b" style={{"marginTop": "auto", "paddingTop": "20px", "borderTop": "1px solid rgba(255,255,255,0.2)", "fontSize": "11px", "opacity": "0.8", "textAlign": "center", "--chart-color-palette": "default"}}>{"© 2026 BESSER. All rights reserved."}</p>
+      </nav>
+      <main id="i0835h" style={{"flex": "1", "padding": "40px", "overflowY": "auto", "background": "#f5f5f5", "--chart-color-palette": "default"}}>
+        <h1 id="i42n0f" style={{"marginTop": "0", "color": "#333", "fontSize": "32px", "marginBottom": "10px", "--chart-color-palette": "default"}}>{"Indisponibilite"}</h1>
+        <p id="iyd6xj" style={{"color": "#666", "marginBottom": "30px", "--chart-color-palette": "default"}}>{"Manage Indisponibilite data"}</p>
+        <TableBlock id="table-indisponibilite-2" styles={{"width": "100%", "minHeight": "400px", "--chart-color-palette": "default"}} title="Indisponibilite List" options={{"showHeader": true, "stripedRows": false, "showPagination": true, "rowsPerPage": 5, "actionButtons": true, "columns": [{"label": "Id", "column_type": "field", "field": "id", "type": "str", "required": true}, {"label": "Motif", "column_type": "field", "field": "motif", "type": "enum", "options": ["FERMETURE", "MAINTENANCE", "TRAVAUX"], "required": true}, {"label": "DateDebut", "column_type": "field", "field": "dateDebut", "type": "date", "required": true}, {"label": "DateFin", "column_type": "field", "field": "dateFin", "type": "date", "required": true}, {"label": "Remarques", "column_type": "field", "field": "remarques", "type": "str", "required": true}, {"label": "Subit", "column_type": "lookup", "path": "Subit", "entity": "ElementCentre", "field": "id", "type": "str", "required": true}], "formColumns": [{"column_type": "field", "field": "id", "label": "id", "type": "str", "required": true, "defaultValue": null}, {"column_type": "field", "field": "motif", "label": "motif", "type": "enum", "required": true, "defaultValue": null, "options": ["FERMETURE", "MAINTENANCE", "TRAVAUX"]}, {"column_type": "field", "field": "dateDebut", "label": "dateDebut", "type": "date", "required": true, "defaultValue": null}, {"column_type": "field", "field": "dateFin", "label": "dateFin", "type": "date", "required": true, "defaultValue": null}, {"column_type": "field", "field": "remarques", "label": "remarques", "type": "str", "required": true, "defaultValue": null}, {"column_type": "lookup", "path": "Subit", "field": "Subit", "lookup_field": "id", "entity": "ElementCentre", "type": "str", "required": true}]}} dataBinding={{"entity": "Indisponibilite", "endpoint": "/indisponibilite/"}} />
+        <div id="i94pg7" style={{"marginTop": "20px", "display": "flex", "gap": "10px", "flexWrap": "wrap", "--chart-color-palette": "default"}}>
+          <MethodButton id="i99616" className="action-button-component" style={{"display": "inline-flex", "alignItems": "center", "padding": "6px 14px", "background": "linear-gradient(90deg, #2563eb 0%, #1e40af 100%)", "color": "#fff", "textDecoration": "none", "borderRadius": "4px", "fontSize": "13px", "fontWeight": "600", "letterSpacing": "0.01em", "cursor": "pointer", "border": "none", "boxShadow": "0 1px 4px rgba(37,99,235,0.10)", "transition": "background 0.2s", "--chart-color-palette": "default"}} endpoint="/indisponibilite/{indisponibilite_id}/methods/estEnConflit/" label="estEnConflit" parameters={[{"name": "debut", "type": "any", "required": true}, {"name": "fin", "type": "any", "required": true}]} isInstanceMethod={true} instanceSourceTableId="table-indisponibilite-2" />
+        </div>
+      </main>
+    </div>    </div>
+  );
+};
+
+export default Indisponibilite;
